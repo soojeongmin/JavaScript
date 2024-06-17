@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 선언과 사용</title>
+</head>
+<body>
+    <script>
+        // JavaScript에서는 자료형에 해당하는 변수를 선언하지 않고
+        // var, let, const 키워드로 모든 자료형의 변수를 선언한다.
+        // 선언된 변수에 저장되는 값에 따라 자료형 유추를 통해 자료형이 지정된다.
+        // ES5에서는 var 키워드로 모든 변수를 선언한다.
+        var num1 = 100;
+        var strNum1 = "100";
+        var bool1 = true;
+
+        // ES6에서는 let, const 키워드로 변수를 선언한다.
+        // 값이 변경되는 변수는 let으로 값이 변경되지 않는 상수는 const로 변수를 선언한다.
+        let num2 = 13.71;
+        let strNum2 = "200";
+        let bool2 = false;
+        // 값을 할당하지 않은 변수는 undefiened 자료형이 된다.
+        let undef;
+        let nulVal = null;
+        let obj = {
+            val1: 1, 
+            val2: 2,
+            alr: () => {
+                alert("111111");
+            }
+        }
+        // JavaScript의 배열 타입과 상관없는 값들을 여러개 저장할 수 있다.(튜플)
+        let arr = [1, "aaa", true, {
+            val: 10,
+            alr: () => {
+                alert("10");
+            }
+        }];
+
+        // 상수
+        const PI = 3.14;
+
+        // typeof 키워드: 변수에 저장된 값의 자료형을 확인할 수 있는 키워드
+        console.log("typeof num1 = " + typeof num1); // number
+        console.log("typeof strNum1 = " + typeof strNum1); // string
+        console.log("typeof bool1 = " + typeof bool1); // boolean
+        console.log("typeof undef = " + typeof undef); // undefined
+        console.log("typeof nulVal = " + typeof nulVal); // object
+        console.log("typeof obj = " + typeof obj); // object
+        console.log("typeof arr = " + typeof arr); // object
+        console.log('🐶'.length);
+        PI = 1.23; // 상수에 값을 재할당하면 에러가 발생한다.
+    </script>
+</body>
+</html>
