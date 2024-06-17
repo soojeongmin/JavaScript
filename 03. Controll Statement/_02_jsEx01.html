@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자가 입력한 값만큼 오른쪽으로 이동시키기</title>
+</head>
+<style>
+    .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: lightcoral;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <script>
+        // prompt창 열어서 사용자가 숫자로 거리 입력
+        const distance = window.prompt("거리 입력");
+        // 입력한 거리만큼 box 오른쪽으로 이동시키기
+        const box = document.getElementsByClassName("box")[0];
+        box.style.left = distance + "px";
+
+    </script>
+</body>
+</html>
