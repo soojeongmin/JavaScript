@@ -44,6 +44,11 @@
         }
 
         div(arr1);
+
+        // 비구조화할당과 rest 파라미터를 함수가 아닌 곳에서 사용
+        const [num17, num18, ...re] = arr1;
+
+        console.log(re);
     </script>
 </body>
 </html>
